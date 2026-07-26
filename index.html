@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chirag Saini – Developer Portfolio</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- SCROLL PROGRESS BAR -->
+  <div id="scroll-progress"></div>
+
+  <!-- PARTICLES CANVAS -->
+  <canvas id="particles-canvas"></canvas>
+
+  <!-- CURSOR GLOW -->
+  <div class="cursor-glow" id="cursor-glow"></div>
+
+  <!-- BACK TO TOP -->
+  <button id="back-to-top" aria-label="Back to top">
+    <i class='bx bx-chevron-up'></i>
+  </button>
+
+  <!-- NAVBAR -->
+  <nav id="navbar">
+    <div class="nav-container">
+      <a href="#hero" class="nav-logo">CS<span class="accent">.</span></a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+      <button id="theme-toggle" aria-label="Toggle theme">
+        <i class='bx bx-sun'></i>
+      </button>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section id="hero">
+    <div class="hero-bg-grid"></div>
+    <div class="hero-content">
+      <div class="hero-text">
+        <p class="hero-greeting">Hi there, I'm</p>
+        <div class="availability-badge">
+          <span class="availability-dot"></span> Available for Internships
+        </div>
+        <h1 class="hero-name">Chirag <span class="accent">Saini</span></h1>
+        <div class="hero-title-wrapper">
+          <span id="typed-text"></span>
+        </div>
+        <p class="hero-desc">
+          B.Tech CSE (AI &amp; ML) student passionate about building backend microservices,
+          CI/CD pipelines, and cloud-native applications. I turn ideas into production-ready systems.
+        </p>
+        <div class="hero-cta">
+          <a href="#projects" class="btn btn-primary">View Projects</a>
+          <a href="#contact" class="btn btn-outline">Get in Touch</a>
+        </div>
+        <div class="hero-socials">
+          <a href="https://github.com/chirag791" target="_blank" rel="noopener" class="social-btn">
+            <i class='bx bxl-github'></i> GitHub
+          </a>
+          <a href="https://www.linkedin.com/in/chirag-s-b6148b372" target="_blank" rel="noopener" class="social-btn">
+            <i class='bx bxl-linkedin'></i> LinkedIn
+          </a>
+          <a href="mailto:chiragsaini1607@gmail.com" class="social-btn">
+            <i class='bx bx-envelope'></i> Email
+          </a>
+        </div>
+      </div>
+      <div class="hero-image-wrapper">
+        <div class="hero-image-ring">
+          <img src="profile.jpg" alt="Chirag Saini" class="hero-image" />
+        </div>
+        <div class="hero-badge badge-java">☕ Java</div>
+        <div class="hero-badge badge-docker">🐳 Docker</div>
+        <div class="hero-badge badge-k8s">⚙️ K8s</div>
+        <div class="hero-badge badge-aws">☁️ AWS</div>
+      </div>
+    </div>
+    <a href="#about" class="scroll-down" aria-label="Scroll down">
+      <i class='bx bx-chevron-down'></i>
+    </a>
+  </section>
+
+  <!-- TECH MARQUEE -->
+  <div class="marquee-section">
+    <div class="marquee-track">
+      <div class="marquee-item"><i class='bx bxl-java'></i><span>Java 21</span></div>
+      <div class="marquee-item"><i class='bx bxl-python'></i><span>Python</span></div>
+      <div class="marquee-item"><i class='bx bxl-docker'></i><span>Docker</span></div>
+      <div class="marquee-item"><i class='bx bx-server'></i><span>Kubernetes</span></div>
+      <div class="marquee-item"><i class='bx bxl-aws'></i><span>AWS EC2</span></div>
+      <div class="marquee-item"><i class='bx bxl-git'></i><span>Git</span></div>
+      <div class="marquee-item"><i class='bx bx-chip'></i><span>Spring Boot</span></div>
+      <div class="marquee-item"><i class='bx bx-data'></i><span>MongoDB</span></div>
+      <div class="marquee-item"><i class='bx bx-infinite'></i><span>Jenkins</span></div>
+      <div class="marquee-item"><i class='bx bxl-github'></i><span>GitHub Actions</span></div>
+      <div class="marquee-item"><i class='bx bx-shield'></i><span>SonarQube</span></div>
+      <div class="marquee-item"><i class='bx bx-code-block'></i><span>FastAPI</span></div>
+      <div class="marquee-item"><i class='bx bx-wrench'></i><span>Maven</span></div>
+      <div class="marquee-item"><i class='bx bx-terminal'></i><span>Postman</span></div>
+      <!-- duplicate for seamless loop -->
+      <div class="marquee-item"><i class='bx bxl-java'></i><span>Java 21</span></div>
+      <div class="marquee-item"><i class='bx bxl-python'></i><span>Python</span></div>
+      <div class="marquee-item"><i class='bx bxl-docker'></i><span>Docker</span></div>
+      <div class="marquee-item"><i class='bx bx-server'></i><span>Kubernetes</span></div>
+      <div class="marquee-item"><i class='bx bxl-aws'></i><span>AWS EC2</span></div>
+      <div class="marquee-item"><i class='bx bxl-git'></i><span>Git</span></div>
+      <div class="marquee-item"><i class='bx bx-chip'></i><span>Spring Boot</span></div>
+      <div class="marquee-item"><i class='bx bx-data'></i><span>MongoDB</span></div>
+      <div class="marquee-item"><i class='bx bx-infinite'></i><span>Jenkins</span></div>
+      <div class="marquee-item"><i class='bx bxl-github'></i><span>GitHub Actions</span></div>
+      <div class="marquee-item"><i class='bx bx-shield'></i><span>SonarQube</span></div>
+      <div class="marquee-item"><i class='bx bx-code-block'></i><span>FastAPI</span></div>
+      <div class="marquee-item"><i class='bx bx-wrench'></i><span>Maven</span></div>
+      <div class="marquee-item"><i class='bx bx-terminal'></i><span>Postman</span></div>
+    </div>
+  </div>
+  <div class="glow-divider"></div>
+
+  <!-- ABOUT -->
+  <section id="about" class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Get to know me</span>
+        <h2 class="section-title">About <span class="accent">Me</span></h2>
+      </div>
+      <div class="about-grid">
+        <div class="about-image-col">
+          <div class="about-image-card">
+            <img src="profile.jpg" alt="Chirag Saini" />
+            <div class="about-image-decor"></div>
+          </div>
+          <div class="about-stats">
+            <div class="stat-card">
+              <span class="stat-number">4+</span>
+              <span class="stat-label">Projects</span>
+            </div>
+            <div class="stat-card">
+              <span class="stat-number">10+</span>
+              <span class="stat-label">Technologies</span>
+            </div>
+            <div class="stat-card">
+              <span class="stat-number">2028</span>
+              <span class="stat-label">Graduation</span>
+            </div>
+          </div>
+        </div>
+        <div class="about-text-col">
+          <h3>Motivated Backend &amp; DevOps Engineer</h3>
+          <p>I'm a <strong>B.Tech CSE (AI &amp; ML)</strong> student at Panipat Institute of Engineering
+          and Technology with hands-on experience in building enterprise-grade backend microservices,
+          RESTful APIs, and full CI/CD pipelines.</p>
+          <p>My core stack is <strong>Java (Spring Boot)</strong> and <strong>Python (FastAPI)</strong>,
+          and I love the DevOps side of things — containerizing with Docker, orchestrating with
+          Kubernetes, and deploying to the cloud on <strong>AWS EC2</strong>.</p>
+          <p>Whether it's writing clean REST APIs, setting up a Jenkins pipeline, or deploying a
+          containerized service on Kubernetes, I enjoy every layer of the development lifecycle.</p>
+          <div class="about-info-grid">
+            <div class="info-item"><i class='bx bx-map'></i><span>Panipat, Haryana, India</span></div>
+            <div class="info-item"><i class='bx bx-phone'></i><span>+91 8295972122</span></div>
+            <div class="info-item"><i class='bx bx-envelope'></i><span>chiragsaini1607@gmail.com</span></div>
+            <div class="info-item"><i class='bx bx-graduation'></i><span>B.Tech CSE (AI &amp; ML) · 2024–2028</span></div>
+          </div>
+          <div class="about-hobbies">
+            <span class="tag">Artificial Intelligence</span>
+            <span class="tag">Machine Learning</span>
+            <span class="tag">Critical Thinking</span>
+            <span class="tag">Team Collaboration</span>
+            <span class="tag">Project Management</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills" class="section section-dark">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">What I work with</span>
+        <h2 class="section-title">Technical <span class="accent">Skills</span></h2>
+      </div>
+      <div class="skills-grid">
+        <div class="skill-category">
+          <div class="skill-category-icon"><i class='bx bx-code-alt'></i></div>
+          <h3>Languages</h3>
+          <div class="skill-chips">
+            <div class="skill-chip"><i class='bx bxl-java'></i> Java</div>
+            <div class="skill-chip"><i class='bx bxl-python'></i> Python</div>
+          </div>
+        </div>
+        <div class="skill-category">
+          <div class="skill-category-icon"><i class='bx bx-layer'></i></div>
+          <h3>Frameworks</h3>
+          <div class="skill-chips">
+            <div class="skill-chip">Spring Boot 3.x</div>
+            <div class="skill-chip">FastAPI</div>
+            <div class="skill-chip">Spring Data MongoDB</div>
+            <div class="skill-chip">springdoc-openapi</div>
+            <div class="skill-chip">Pydantic</div>
+          </div>
+        </div>
+        <div class="skill-category">
+          <div class="skill-category-icon"><i class='bx bx-data'></i></div>
+          <h3>Databases</h3>
+          <div class="skill-chips">
+            <div class="skill-chip">MongoDB</div>
+          </div>
+        </div>
+        <div class="skill-category">
+          <div class="skill-category-icon"><i class='bx bx-infinite'></i></div>
+          <h3>DevOps &amp; CI/CD</h3>
+          <div class="skill-chips">
+            <div class="skill-chip"><i class='bx bxl-docker'></i> Docker</div>
+            <div class="skill-chip">Kubernetes (K8s)</div>
+            <div class="skill-chip">Jenkins</div>
+            <div class="skill-chip">GitHub Actions</div>
+            <div class="skill-chip">SonarQube</div>
+            <div class="skill-chip">Docker Compose</div>
+          </div>
+        </div>
+        <div class="skill-category">
+          <div class="skill-category-icon"><i class='bx bxl-aws'></i></div>
+          <h3>Cloud</h3>
+          <div class="skill-chips">
+            <div class="skill-chip">AWS EC2</div>
+          </div>
+        </div>
+        <div class="skill-category">
+          <div class="skill-category-icon"><i class='bx bx-wrench'></i></div>
+          <h3>Tools</h3>
+          <div class="skill-chips">
+            <div class="skill-chip">Maven</div>
+            <div class="skill-chip">Gradle</div>
+            <div class="skill-chip">Swagger / OpenAPI</div>
+            <div class="skill-chip">Postman</div>
+            <div class="skill-chip"><i class='bx bxl-git'></i> Git</div>
+            <div class="skill-chip">Spring Actuator</div>
+            <div class="skill-chip">Javadoc</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- PROJECTS -->
+  <section id="projects" class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">What I've built</span>
+        <h2 class="section-title">Featured <span class="accent">Projects</span></h2>
+      </div>
+      <div class="projects-grid">
+
+        <!-- Project 1 -->
+        <article class="project-card featured">
+          <div class="project-card-header">
+            <div class="project-icon"><i class='bx bx-credit-card'></i></div>
+            <span class="project-badge">Enterprise-Level</span>
+          </div>
+          <h3>Payment Service Microservice</h3>
+          <p>A full-featured RESTful Payment Service supporting credit card management, payment
+          initiation, OTP-based transaction verification, recurring payments, fraud detection,
+          refunds, spending limits, and full transaction history.</p>
+          <ul class="project-highlights">
+            <li>Integrated MongoDB with Spring Data MongoDB as the primary database</li>
+            <li>Containerized with Docker; multi-container setup via Docker Compose with custom networks</li>
+            <li>Deployed on Kubernetes with dedicated Deployment &amp; Service YAML manifests</li>
+            <li>End-to-end CI/CD pipeline in Jenkins (build → test → Docker image → K8s deploy)</li>
+            <li>SonarQube integration for static code analysis and quality gates</li>
+            <li>Swagger UI for interactive API docs; Spring Actuator for health monitoring</li>
+            <li>Javadoc API documentation generated via Maven Javadoc plugin</li>
+          </ul>
+          <div class="project-tech">
+            <span>Java 21</span><span>Spring Boot 3.1</span><span>MongoDB</span>
+            <span>Docker</span><span>Kubernetes</span><span>Jenkins</span>
+            <span>SonarQube</span><span>Maven</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/chirag791" target="_blank" rel="noopener" class="btn btn-sm btn-primary">
+              <i class='bx bxl-github'></i> GitHub
+            </a>
+          </div>
+        </article>
+
+        <!-- Project 2 -->
+        <article class="project-card">
+          <div class="project-card-header">
+            <div class="project-icon"><i class='bx bxl-aws'></i></div>
+            <span class="project-badge">Cloud DevOps</span>
+          </div>
+          <h3>Payment Service CI/CD – GitHub Actions &amp; AWS EC2</h3>
+          <p>Extended the Payment Service with a full cloud deployment pipeline using GitHub Actions
+          — no Jenkins required. Automated the entire workflow from code commit to live EC2 deployment.</p>
+          <ul class="project-highlights">
+            <li>GitHub Actions workflow: Spring Boot build → Docker image → Docker Hub push → EC2 SSH deploy</li>
+            <li>Sensitive credentials managed securely via GitHub Actions Secrets</li>
+            <li>EC2 configured with Docker runtime and proper container user permissions</li>
+            <li>Demonstrates a complete end-to-end DevOps lifecycle on AWS cloud</li>
+          </ul>
+          <div class="project-tech">
+            <span>Java 21</span><span>Spring Boot</span><span>Docker</span>
+            <span>GitHub Actions</span><span>AWS EC2</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/chirag791" target="_blank" rel="noopener" class="btn btn-sm btn-primary">
+              <i class='bx bxl-github'></i> GitHub
+            </a>
+          </div>
+        </article>
+
+        <!-- Project 3 -->
+        <article class="project-card">
+          <div class="project-card-header">
+            <div class="project-icon"><i class='bx bxl-python'></i></div>
+            <span class="project-badge">Python Microservice</span>
+          </div>
+          <h3>User Microservice – Python REST API</h3>
+          <p>A lightweight User Management microservice built with FastAPI featuring full CRUD
+          operations, Pydantic validation, auto-generated Swagger docs, and Docker containerization.</p>
+          <ul class="project-highlights">
+            <li>Full CRUD (Create, Read, Update, Delete) for user management</li>
+            <li>Pydantic models for strict request/response validation</li>
+            <li>Auto-generated Swagger UI (/docs) and OpenAPI JSON endpoint</li>
+            <li>Health check endpoint (/health) for service monitoring</li>
+            <li>Containerized with Docker for consistent, portable deployments</li>
+          </ul>
+          <div class="project-tech">
+            <span>Python</span><span>FastAPI</span><span>Pydantic</span>
+            <span>Uvicorn</span><span>Docker</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/chirag791" target="_blank" rel="noopener" class="btn btn-sm btn-primary">
+              <i class='bx bxl-github'></i> GitHub
+            </a>
+          </div>
+        </article>
+
+        <!-- Project 4 -->
+        <article class="project-card">
+          <div class="project-card-header">
+            <div class="project-icon"><i class='bx bx-wallet'></i></div>
+            <span class="project-badge">Spring Boot</span>
+          </div>
+          <h3>Credit Card Application</h3>
+          <p>A Spring Boot application for credit card management built with Spring Web and
+          Spring Data MongoDB. Follows clean architecture principles with Maven Wrapper for
+          reproducible builds.</p>
+          <ul class="project-highlights">
+            <li>RESTful API design following Spring Web best practices</li>
+            <li>MongoDB integration via Spring Data for seamless data persistence</li>
+            <li>Maven Wrapper for consistent, reproducible builds across environments</li>
+            <li>GitHub Actions workflow for automated dependency modernization</li>
+          </ul>
+          <div class="project-tech">
+            <span>Java</span><span>Spring Boot</span>
+            <span>Spring Data MongoDB</span><span>Maven</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/chirag791" target="_blank" rel="noopener" class="btn btn-sm btn-primary">
+              <i class='bx bxl-github'></i> GitHub
+            </a>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- EDUCATION -->
+  <section id="education" class="section section-dark">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">My journey</span>
+        <h2 class="section-title">Education &amp; <span class="accent">Background</span></h2>
+      </div>
+      <div class="education-wrapper">
+        <div class="education-card">
+          <div class="education-icon"><i class='bx bx-buildings'></i></div>
+          <div class="education-body">
+            <span class="education-period">Aug 2024 – Jun 2028</span>
+            <h3>B.Tech CSE – Artificial Intelligence &amp; Machine Learning</h3>
+            <p class="education-institution">
+              Panipat Institute of Engineering and Technology<br/>
+              Panipat, Haryana – 132103
+            </p>
+            <p>Studying core computer science subjects alongside specialised AI &amp; ML modules,
+            with a strong focus on practical engineering — building real-world microservices,
+            CI/CD pipelines, and cloud deployments as part of self-driven projects.</p>
+            <div class="education-tags">
+              <span>AI &amp; Machine Learning</span>
+              <span>Software Engineering</span>
+              <span>Data Structures</span>
+              <span>Cloud Computing</span>
+              <span>DevOps Practices</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Let's talk</span>
+        <h2 class="section-title">Get in <span class="accent">Touch</span></h2>
+        <p class="section-subtitle">
+          I'm open to internship opportunities, collaborations, and interesting conversations
+          about backend development and DevOps. Feel free to reach out!
+        </p>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-cards">
+          <a href="mailto:chiragsaini1607@gmail.com" class="contact-card">
+            <div class="contact-card-icon"><i class='bx bx-envelope'></i></div>
+            <div><h4>Email</h4><p>chiragsaini1607@gmail.com</p></div>
+          </a>
+          <a href="tel:+918295972122" class="contact-card">
+            <div class="contact-card-icon"><i class='bx bx-phone'></i></div>
+            <div><h4>Phone</h4><p>+91 8295972122</p></div>
+          </a>
+          <a href="https://www.linkedin.com/in/chirag-s-b6148b372" target="_blank" rel="noopener" class="contact-card">
+            <div class="contact-card-icon"><i class='bx bxl-linkedin'></i></div>
+            <div><h4>LinkedIn</h4><p>chirag-s-b6148b372</p></div>
+          </a>
+          <a href="https://github.com/chirag791" target="_blank" rel="noopener" class="contact-card">
+            <div class="contact-card-icon"><i class='bx bxl-github'></i></div>
+            <div><h4>GitHub</h4><p>github.com/chirag791</p></div>
+          </a>
+          <div class="contact-card no-link">
+            <div class="contact-card-icon"><i class='bx bx-map'></i></div>
+            <div><h4>Location</h4><p>Panipat, Haryana, India</p></div>
+          </div>
+        </div>
+
+        <form class="contact-form" id="contact-form" onsubmit="handleFormSubmit(event)">
+          <div class="form-group">
+            <label for="name">Your Name</label>
+            <input type="text" id="name" name="name" placeholder="John Doe" required autocomplete="name" />
+          </div>
+          <div class="form-group">
+            <label for="email">Your Email</label>
+            <input type="email" id="email" name="email" placeholder="john@example.com" required autocomplete="email" />
+          </div>
+          <div class="form-group">
+            <label for="subject">Subject</label>
+            <input type="text" id="subject" name="subject" placeholder="Internship Opportunity" required />
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" placeholder="Write your message here..." required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-full">
+            <i class='bx bx-send'></i> Send Message
+          </button>
+          <p class="form-note" id="form-note"></p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container footer-inner">
+      <p>Designed &amp; Built by <span class="accent">Chirag Saini</span> &middot; 2025</p>
+      <div class="footer-socials">
+        <a href="https://github.com/chirag791" target="_blank" rel="noopener" aria-label="GitHub"><i class='bx bxl-github'></i></a>
+        <a href="https://www.linkedin.com/in/chirag-s-b6148b372" target="_blank" rel="noopener" aria-label="LinkedIn"><i class='bx bxl-linkedin'></i></a>
+        <a href="mailto:chiragsaini1607@gmail.com" aria-label="Email"><i class='bx bx-envelope'></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
